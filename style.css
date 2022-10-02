@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 75%;
+  background-position: left -550px top -50px, right 0px bottom -100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1150px;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+}
+
+.row section {
+  flex: 1;
+}
+
+.first-section h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 4rem;
+  max-width: 26rem;
+  margin-bottom: 1.5rem;
+}
+
+.first-section p {
+  max-width: 26rem;
+  color: hsl(303, 10%, 53%);
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+.quote {
+  max-width: 17.5rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  line-height: 1.1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.second-section {
+  display: flex;
+  justify-content: right;
+}
+
+.ratings {
+  margin-top: 2rem;
+}
+
+.ratings li {
+  background-color: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1.1rem 3rem;
+  border-radius: 0.5rem;
+  max-width: 35rem;
+  display: flex;
+}
+.ratings li::before {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 1rem;
+  margin-right: 2rem;
+  background-image: url(./images/icon-star.svg);
+  background-size: 0.9rem;
+  background-repeat: space;
+}
+.ratings li:nth-child(1),
+.ratings li:nth-child(2) {
+  margin-bottom: 1em;
+}
+.ratings li:nth-child(1) {
+  transform: translateX(-6rem);
+}
+.ratings li:nth-child(2) {
+  transform: translateX(-3rem);
+}
+
+.overviews {
+  display: flex;
+}
+
+.overviews li {
+  background-color: hsl(300, 43%, 22%);
+  color: hsl(300, 24%, 96%);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.overviews li:nth-child(1),
+.overviews li:nth-child(2) {
+  margin-right: 5em;
+}
+
+.overviews li:nth-child(2) {
+  transform: translateY(1rem);
+}
+.overviews li:nth-child(3) {
+  transform: translateY(2rem);
+}
+
+.split {
+  display: flex;
+}
+
+.i-center {
+  align-items: center;
+}
+
+img {
+  width: 2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+.status {
+  color: hsl(333, 80%, 67%);
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+@media screen and (max-width: 1060px) and (min-width: 901px) {
+  .first-section h1 {
+    font-size: 3rem;
+    max-width: 26rem;
+  }
+
+  .first-section p {
+    max-width: 24rem;
+    font-size: 1rem;
+  }
+
+  .ratings li {
+    font-size: 0.85rem;
+    padding: 0.75rem 1.3rem;
+    border-radius: 0.5rem;
+    max-width: 35rem;
+    display: flex;
+  }
+
+  .ratings li::before {
+    width: 4rem;
+    margin-right: 1.4rem;
+    background-size: 0.8rem;
+  }
+
+  .overviews li {
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(300, 24%, 96%);
+    border-radius: 0.5rem;
+    padding: 1.4rem;
+    margin-top: 3rem;
+  }
+  .quote {
+    max-width: 14.5rem;
+    font-size: 0.83rem;
+    margin-top: 0.9rem;
+    line-height: 1.1rem;
+  }
+  img {
+    width: 2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  .name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+  }
+
+  .status {
+    color: hsl(333, 80%, 67%);
+    font-size: 0.85rem;
+    opacity: 0.95;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+      padding: 5rem 1rem;
+      max-width: 450px;  
+    }
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-section p {
+    max-width: 100%;
+  }
+
+  .first-section {
+    text-align: center;
+  }
+  .second-section {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .ratings {
+    width: 100%;
+  }
+
+  .ratings li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ratings li {
+    font-size: 1rem;
+    padding: 0.75rem 1.3rem;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    display: flex;
+  }
+
+  .ratings li::before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0rem;
+    background-image: url(./images/icon-star.svg);
+    background-size: 0.9rem;
+    background-repeat: space;
+  }
+
+  .ratings li:nth-child(1) {
+    transform: translateX(0rem);
+  }
+  .ratings li:nth-child(2) {
+    transform: translateX(0rem);
+  }
+
+  .first-section h1 {
+    color: hsl(300, 43%, 22%);
+    font-size: 3rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .first-section p {
+    color: hsl(303, 10%, 53%);
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overviews {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 20rem;
+  }
+
+  .overviews li:nth-child(2) {
+    transform: translateY(0rem);
+  }
+  .overviews li:nth-child(3) {
+    transform: translateY(0rem);
+  }
+  .overviews li:nth-child(1),
+  .overviews li:nth-child(2) {
+    margin-right: 0em;
+  }
+}
